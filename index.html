@@ -53,7 +53,7 @@ overflow: hidden;
 
 <body bgcolor="#c7fcec"    >
 <div class="all">
-<textarea id="notes" class="text_area_form" placeholder='введите ноты доступны - d,e,f#,g,a,b,c#,D,E,F#,G,A,B,C# - с маленькой буквы 1 октава, с большой 2-я'  ></textarea> 
+<textarea id="notes" class="text_area_form" placeholder='введите ноты доступны - d,e,f#,g,a,b,c#,D,E,F#,G,A,B,C# - с маленькой буквы 2 октава, с большой 1-я'  ></textarea> 
 <input type="button"   value="------------ Draw tabs ------------" onclick="print_tabs()" class="btn"/>
  
 <div id="img_div" class="ground_mount"> </div>
@@ -69,7 +69,7 @@ function ran(x){return  Math.round(Math.random()*x);}
  //<img id="hero" src="an/a0.png" class="hero" /> 
  
 var all = {}; 
-all.pat = ["d","e","f#","g","a","b","c#","D","E","F#","G","A","B","C#"];
+all.pat = ["D","E","F#","G","A","B","C#","d","e","f#","g","a","b","c#"];
 all.end = [];
 function print_tabs(){
 all.end = [];  
@@ -103,13 +103,13 @@ draw();
 
 function draw(){
 var str = "";
-str+='<img src="img/start.gif" class="img" />';
+str+='<img src="img/w_01.png" class="img" />';
 for(var i=0;i<all.end.length;i++){
 
 
 
  
-str+='<img src="img/Whistletab_94_'+(all.end[i].notes+2)+'.gif" class="img" />';
+str+='<img src="img/w_'+(all.end[i].notes+2)+'.png" class="img" />';
 
 }//for
  
